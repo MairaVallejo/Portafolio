@@ -1,0 +1,79 @@
+*{
+    font-family: 'Ysabeau', sans-serif;
+    
+}
+.darkModeSwitch{
+    background: #CBE4DE;
+    display:flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.darkModeSwitch span{
+    width:30px;
+    height:30px;
+    line-height:35px;
+    display:block;
+    color:rgb(253, 253, 253);
+    background: none;
+}
+.darkModeSwitch::after{
+    display:block;
+    background: #fffbf5;
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius: 4rem;
+    transition: all .5s ease;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .5);
+    content: "";
+}
+.darkModeSwitch.active{
+    background: #6D9886;
+    
+  }
+.darkModeSwitch.active::after{
+    left:unset;
+    right:0;
+    
+}
+body.dark{
+        background: #2C3333;
+        color: white !important;
+}
+body.dark a{
+    text-decoration: none;
+    color: white !important;
+}
+body.dark .btn0{
+    text-decoration:none;
+    background: transparent;
+    border-radius: 6px;
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-transform: uppercase;  
+}
+body.dark .btn1{
+    background-color: #2c3333; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+body.dark .btn1:hover {
+    background-color: #008CBA;
+    color: white;
+    
+  }
